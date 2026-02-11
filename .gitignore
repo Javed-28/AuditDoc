@@ -1,0 +1,22 @@
+# Node
+node_modules/
+
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Environment
+.env
+
+# Build folders
+dist/
+build/
+
+# Logs
+*.log
+
+# Large/generated files
+*.png
+*.exe

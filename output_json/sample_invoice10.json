@@ -1,0 +1,22 @@
+[
+  {
+    "dealer_name": "AGROTECH",
+    "model_name": "",
+    "horse_power": null,
+    "asset_cost": null,
+    "signature": {
+      "present": true,
+      "bbox": [
+        16,
+        0,
+        1117,
+        263
+      ]
+    },
+    "stamp": {
+      "present": false,
+      "bbox": null
+    },
+    "confidence": 0.4
+  }
+]

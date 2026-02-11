@@ -1,0 +1,30 @@
+[
+  {
+    "doc_id": "sample_output12.png",
+    "dealer_name": "TRACTORS",
+    "model_name": "",
+    "horse_power": null,
+    "asset_cost": null,
+    "signature": {
+      "present": true,
+      "bbox": [
+        1708,
+        74,
+        1760,
+        130
+      ]
+    },
+    "stamp": {
+      "present": true,
+      "bbox": [
+        76,
+        0,
+        2095,
+        151
+      ]
+    },
+    "confidence": 0.4,
+    "processing_time_sec": 1.61,
+    "cost_estimate_usd": 0.002
+  }
+]

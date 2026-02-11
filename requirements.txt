@@ -1,0 +1,17 @@
+# Core Image Processing
+opencv-python>=4.8.0
+
+# OCR Engine Wrapper (Tesseract must be installed separately at system level)
+pytesseract>=0.3.10
+
+# Numerical Computing
+numpy>=1.24.0
+
+# PDF to Image Conversion (requires poppler at system level)
+pdf2image>=1.16.3
+
+# Fuzzy String Matching for noisy OCR outputs
+rapidfuzz>=3.5.0
+
+# Image I/O and diagram support
+Pillow>=10.0.0

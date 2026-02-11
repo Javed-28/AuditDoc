@@ -1,0 +1,27 @@
+[
+  {
+    "dealer_name": "",
+    "model_name": "",
+    "horse_power": null,
+    "asset_cost": 423401,
+    "signature": {
+      "present": true,
+      "bbox": [
+        740,
+        156,
+        832,
+        218
+      ]
+    },
+    "stamp": {
+      "present": true,
+      "bbox": [
+        157,
+        0,
+        915,
+        143
+      ]
+    },
+    "confidence": 0.4
+  }
+]

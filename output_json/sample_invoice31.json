@@ -1,0 +1,27 @@
+[
+  {
+    "dealer_name": "TRACTORS",
+    "model_name": "",
+    "horse_power": null,
+    "asset_cost": 506223,
+    "signature": {
+      "present": true,
+      "bbox": [
+        129,
+        321,
+        611,
+        373
+      ]
+    },
+    "stamp": {
+      "present": true,
+      "bbox": [
+        0,
+        0,
+        1061,
+        436
+      ]
+    },
+    "confidence": 0.6
+  }
+]
