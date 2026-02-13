@@ -64,7 +64,7 @@ export default function UploadCard({ setResult, setLoading }) {
       "
     >
       <h2 className="text-xl font-semibold mb-4">
-        Upload Tractor Document
+        Upload Invoice
       </h2>
 
       {/* FILE INPUT + LEFT-SHIFTED TOAST */}

@@ -1,4 +1,4 @@
-# Tractor Document OCR System
+# Invoice OCR System
 
 ## Overview
 This repository implements an **offline, rule-based OCR system** for extracting structured information from scanned tractor-related documents.  
@@ -20,7 +20,7 @@ It is suitable for **academic evaluation**, **fintech document verification**, a
 ---
 
 ## System Architecture
-![Architecture](diagrams/architecture.png)
+![Architecture](diagrams/pipeline and architecture.png)
 
 The system follows a **layered document understanding architecture**:
 
@@ -37,7 +37,7 @@ Each layer is independent, testable, and explainable.
 ---
 
 ## Processing Pipeline
-![Processing Pipeline](diagrams/pipeline.png)
+![Processing Pipeline](diagrams/pipeline and architecture.png)
 
 1. Document ingestion (image / PDF)  
 2. Image preprocessing  
