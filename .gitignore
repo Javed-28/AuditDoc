@@ -1,4 +1,31 @@
+# Node
 frontend/node_modules/
+node_modules/
+
+# Python
 backend/venv/
+venv/
 __pycache__/
+*.pyc
+*.pyo
+
+# Environment
 .env
+
+# Build folders
+dist/
+build/
+
+# Logs
+*.log
+
+# Large/generated files
+*.png
+*.exe
+!diagrams/
+!diagrams/*.png
+
+# Backend outputs (optional – remove if you want to track them)
+backend/output/
+backend/output_json/
+backend/sample_output/

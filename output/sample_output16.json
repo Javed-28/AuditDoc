@@ -1,0 +1,25 @@
+[
+  {
+    "doc_id": "sample_output16.png",
+    "dealer_name": "",
+    "model_name": "",
+    "horse_power": null,
+    "asset_cost": 30404,
+    "signature": {
+      "present": true,
+      "bbox": [
+        0,
+        0,
+        1062,
+        466
+      ]
+    },
+    "stamp": {
+      "present": false,
+      "bbox": null
+    },
+    "confidence": 0.4,
+    "processing_time_sec": 2.25,
+    "cost_estimate_usd": 0.002
+  }
+]

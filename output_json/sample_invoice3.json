@@ -1,0 +1,27 @@
+[
+  {
+    "dealer_name": "SRIAMUTHAMTRACTORS@GMAIL.COM,",
+    "model_name": "",
+    "horse_power": null,
+    "asset_cost": 71105,
+    "signature": {
+      "present": true,
+      "bbox": [
+        946,
+        319,
+        1071,
+        381
+      ]
+    },
+    "stamp": {
+      "present": true,
+      "bbox": [
+        48,
+        0,
+        1092,
+        308
+      ]
+    },
+    "confidence": 0.6
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "dealer_name": "MKMOTORSSONALIKATRACTOR@GMAIL.COM",
+    "model_name": "",
+    "horse_power": null,
+    "asset_cost": 73738,
+    "signature": {
+      "present": true,
+      "bbox": [
+        23,
+        309,
+        697,
+        322
+      ]
+    },
+    "stamp": {
+      "present": true,
+      "bbox": [
+        22,
+        0,
+        1061,
+        91
+      ]
+    },
+    "confidence": 0.6
+  }
+]

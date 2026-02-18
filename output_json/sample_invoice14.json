@@ -1,0 +1,27 @@
+[
+  {
+    "dealer_name": "JASMANTRACTORSKORBA@GMAIL.COM",
+    "model_name": "",
+    "horse_power": null,
+    "asset_cost": 495677,
+    "signature": {
+      "present": true,
+      "bbox": [
+        1,
+        0,
+        1062,
+        189
+      ]
+    },
+    "stamp": {
+      "present": true,
+      "bbox": [
+        0,
+        262,
+        1062,
+        445
+      ]
+    },
+    "confidence": 0.6
+  }
+]

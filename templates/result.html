@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OCR Result</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/theme.js" defer></script>
+  <script src="/static/result.js" defer></script>
+</head>
+<body>
+
+<button class="theme-toggle" onclick="toggleTheme()">🌗</button>
+
+<div class="success-box" id="successBox">
+  ✅ Document processed successfully.<br>
+  You can review, copy, or download the output below.
+</div>
+
+{% if image_url %}
+<img src="{{ image_url }}" style="max-width:400px;border:1px solid #ccc;margin-bottom:12px;">
+{% endif %}
+
+<div class="controls">
+  <button onclick="showJSON()">JSON</button>
+  <button onclick="showTXT()">TXT</button>
+  <button onclick="toggleCollapse()" id="collapseBtn">Collapse JSON</button>
+  <div class="copy-wrapper">
+  <div class="copy-wrapper">
+  <button onclick="copyOutput()" id="copyBtn" class="copy-btn" title="Copy to clipboard">
+    📋 Copy
+  </button>
+  <div id="copyFeedback" class="copy-feedback">Copied to clipboard</div>
+</div>
+</div>
+</div>
+
+</div>
+
+<br>
+
+<pre id="outputBox" class="output-box"></pre>
+
+<form method="post" id="downloadForm">
+  <input type="hidden" name="data" id="downloadData">
+  <button
+  type="submit"
+  id="downloadBtn"
+  title="Downloads current view (.json)">
+  Download .json
+</button>
+
+</form>
+
+<br>
+<a href="/">🔁 Upload another document</a>
+
+<pre id="jsonData" style="display:none;">{{ result_json | tojson(indent=2) }}</pre>
+<pre id="txtData" style="display:none;">{{ result_text }}</pre>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+[
+  {
+    "dealer_name": "INDUSTRIES",
+    "model_name": "",
+    "horse_power": null,
+    "asset_cost": null,
+    "signature": {
+      "present": true,
+      "bbox": [
+        554,
+        0,
+        1058,
+        7
+      ]
+    },
+    "stamp": {
+      "present": false,
+      "bbox": null
+    },
+    "confidence": 0.4
+  }
+]
