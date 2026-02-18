@@ -32,15 +32,19 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 # --------------------------------------------------
 # TESSERACT CONFIG (AUTO-DETECT SAFE)
 # --------------------------------------------------
+# --------------------------------------------------
+# TESSERACT CONFIG (DOCKER + WINDOWS SAFE)
+# --------------------------------------------------
 
 tesseract_path = shutil.which("tesseract")
 
 if tesseract_path:
+    # Works in Docker / Linux / Render
     pytesseract.pytesseract.tesseract_cmd = tesseract_path
 else:
+    # Fallback for local Windows development
     if platform.system() == "Windows":
         pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
-
 
 # --------------------------------------------------
 # CONSTANTS
