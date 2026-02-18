@@ -5,6 +5,7 @@ import numpy as np
 import re
 import json
 import os
+import platform
 
 from pdf2image import convert_from_path
 from rapidfuzz import fuzz
@@ -31,10 +32,15 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 
 # --------------------------------------------------
-# TESSERACT CONFIG
+# TESSERACT CONFIG (CROSS-PLATFORM SAFE)
 # --------------------------------------------------
 
-pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+if platform.system() == "Windows":
+    # Local Windows development
+    pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+else:
+    # Linux (Render / production)
+    pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"
 
 
 # --------------------------------------------------
@@ -196,11 +202,11 @@ if __name__ == "__main__":
                 json.dump(output, f, indent=2)
 
     print("All images processed successfully.")
-    
+
+
 def run_ocr_pipeline(file_path):
     """
     API wrapper: accepts image or PDF path
     returns extracted JSON
     """
     return process_input(file_path)
-
