@@ -6,6 +6,7 @@ import re
 import json
 import os
 import platform
+import shutil
 
 from pdf2image import convert_from_path
 from rapidfuzz import fuzz
@@ -17,7 +18,7 @@ from utils.confidence_utils import calculate_confidence
 
 
 # --------------------------------------------------
-# PATH RESOLUTION (ROBUST, EDITOR-INDEPENDENT)
+# PATH RESOLUTION
 # --------------------------------------------------
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -25,22 +26,20 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 INPUT_DIR = os.path.abspath(os.path.join(BASE_DIR, "..", "input_images"))
 OUTPUT_DIR = os.path.abspath(os.path.join(BASE_DIR, "..", "output"))
 
-print("Resolved INPUT_DIR:", INPUT_DIR)
-print("Resolved OUTPUT_DIR:", OUTPUT_DIR)
-
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 
 # --------------------------------------------------
-# TESSERACT CONFIG (CROSS-PLATFORM SAFE)
+# TESSERACT CONFIG (AUTO-DETECT SAFE)
 # --------------------------------------------------
 
-if platform.system() == "Windows":
-    # Local Windows development
-    pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+tesseract_path = shutil.which("tesseract")
+
+if tesseract_path:
+    pytesseract.pytesseract.tesseract_cmd = tesseract_path
 else:
-    # Linux (Render / production)
-    pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"
+    if platform.system() == "Windows":
+        pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
 
 # --------------------------------------------------
@@ -161,7 +160,7 @@ def process_image(image_path):
 
 
 # --------------------------------------------------
-# INPUT HANDLER (PNG / PDF)
+# INPUT HANDLER
 # --------------------------------------------------
 
 def process_input(path):
@@ -189,7 +188,6 @@ if __name__ == "__main__":
     for filename in os.listdir(INPUT_DIR):
         if filename.lower().endswith(".png"):
             image_path = os.path.join(INPUT_DIR, filename)
-            print(f"Processing: {filename}")
 
             output = process_input(image_path)
 
@@ -205,8 +203,4 @@ if __name__ == "__main__":
 
 
 def run_ocr_pipeline(file_path):
-    """
-    API wrapper: accepts image or PDF path
-    returns extracted JSON
-    """
     return process_input(file_path)
